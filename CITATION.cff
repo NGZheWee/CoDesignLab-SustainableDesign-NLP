@@ -5,7 +5,7 @@ authors:
   - family-names: Ng
     given-names: Zhe Wee
     orcid: ""
-repository-code: "https://github.com/NGZheWee/SustainableDesign-NLP-UserInsights"
+repository-code: "https://github.com/NGZheWee/CoDesignLab-SustainableDesign-NLP"
 preferred-citation:
   type: conference-paper
   title: "Data-Driven Sustainable Design Opportunities from Automated User Insights"
