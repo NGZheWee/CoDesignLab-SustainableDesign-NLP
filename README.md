@@ -1,77 +1,66 @@
 # NLP-Driven Sustainable Design
 
-This repository hosts the code, datasets, and documentation for a research project conducted under the **Berkeley Engineering Design Scholars Program** and the **Co-Design Lab** at UC Berkeley.  
-The study explores how **Natural Language Processing (NLP)** and data-driven analytics can bridge customer perceptions and sustainable product design by extracting design-relevant insights from large-scale review and certification data.
+This repository contains my research artifacts for **NLP-driven sustainable design** work conducted through the **Berkeley Engineering Design Scholars Program** and the **Co-Design Lab** at UC Berkeley. The project studies how customer reviews, product certifications, and natural-language processing can reveal design opportunities for more sustainable consumer products.
 
----
+The work contributed to the ASME IDETC-CIE 2025 paper **"Data-Driven Sustainable Design Opportunities from Automated User Insights"**. Official project context is available through my [Co-Design Lab profile](https://codesign.berkeley.edu/team/derrick-ng/) and the [Co-Design Lab paper page](https://codesign.berkeley.edu/papers/goridkov-reviews-idetc/).
 
-## Overview
+## Contents
 
-The project began in **Summer 2024** through the [Berkeley Engineering Design Scholars Program](https://jacobsinstitute.berkeley.edu/news/meet-the-2024-berkeley-engineering-design-scholars/) and continued through **Fall 2024 – Spring 2025** at the [Co-Design Lab](https://codesign.berkeley.edu/team/derrick-ng/).  
-Our goal was to understand how consumers interpret sustainability information and how these insights can guide sustainable product development and certification strategies.  
-This work culminated in a **peer-reviewed publication** at *ASME IDETC-CIE 2025 (Anaheim, CA)* —  
-*“Data-Driven Sustainable Design Opportunities from Automated User Insights” (IDETC2025-169019).*
+- **Summer 2024 (Engineering Design Scholar Program)**: Initial Amazon product and review scraping pipelines, early ABSA experiments, VADER/BERT sentiment analysis, topic modeling, sustainability keyword dictionaries, and the final program poster.
+- **Fall 2024**: Expanded data-processing workflows, product-feature and affordance extraction, GPT-assisted sentiment and topic modeling, merged product-review datasets, and intermediate analysis outputs.
+- **Spring 2025**: IDETC-focused analysis scripts, certification/product/affordance correlation workflows, ABSA trend plots, and final mini-database generation scripts.
 
----
+## Research Scope
 
-## Methodology
+- Built a review-analysis pipeline for **23,000+ Amazon customer reviews** across **290 sustainability-certified products**.
+- Studied consumer perception of sustainability certifications, product affordances, product features, and sustainability-related review language.
+- Connected customer-review signals with sustainable-design opportunity generation using ABSA, topic modeling, correlation analysis, and LLM-assisted synthesis.
 
-1. **Data Collection**  
-   - Compiled over **23 000 Amazon reviews** across **290 sustainability-certified products** using automated web-scraping pipelines built with `DrissionPage`, `BeautifulSoup`, and structured CSV workflows.  
-   - Focused on certifications such as **Energy Star**, **Fair Trade**, and **FSC** to ensure environmental and social relevance.
+## Methods and Tools
 
-2. **Data Pre-Processing**  
-   - Cleaned, tokenized, and mapped reviews to product features and certification tags.  
-   - Filtered noise, standardized sentiment scales, and aligned text segments with affordance-related descriptors (e.g., durability, packaging, energy use).
+- **Data collection**: DrissionPage, Selenium, BeautifulSoup, selector-based scraping, and structured CSV workflows.
+- **Text processing**: Cleaning, tokenization, keyword dictionaries, review filtering, and product/category normalization.
+- **Sentiment analysis**: VADER, BERT-based sentiment classification, and GPT-assisted sentiment scoring.
+- **Topic modeling**: LDA, NMF, BERTopic, and GPT-assisted topic summarization.
+- **Design synthesis**: Product-feature extraction, affordance extraction, certification mapping, correlation matrices, and trend visualization.
 
-3. **NLP Analysis**  
-   - Applied **Aspect-Based Sentiment Analysis (ABSA)** using **BERT**, **VADER**, and the **OpenAI API** for fine-grained sentiment extraction.  
-   - Conducted **topic modeling** via **LDA** and **NMF** to uncover latent sustainability themes and user concerns.  
-   - Performed **correlation and clustering analyses** to link sentiment polarity and thematic relevance to certification attributes, revealing perception gaps between consumer priorities and certification focus.
+## Key Outputs
 
-4. **Validation & Synthesis**  
-   - Constructed correlation matrices and co-occurrence networks connecting consumer sentiment, product affordances, and certification data.  
-   - Compared **LLM-generated design opportunities** against manually derived insights, demonstrating that the NLP pipeline can scale sustainable-design ideation beyond human-coded analyses.
+- A structured dataset linking sustainability certifications, product metadata, product reviews, sentiment scores, affordance labels, and topic-modeling outputs.
+- Comparative analyses of customer-facing sustainability concerns such as packaging, durability, material perception, quality, and energy use.
+- Publication materials for **ASME IDETC-CIE 2025**, including the paper:
 
----
+  Goridkov, N., Ng, Z. W., & Goucher-Lambert, K. (2025). *Data-Driven Sustainable Design Opportunities from Automated User Insights*. Proceedings of the ASME 2025 International Design Engineering Technical Conferences and Computers and Information in Engineering Conference, IDETC2025-169019.
 
-## Key Findings
+## How to Navigate
 
-- Certifications emphasizing **visible, experiential product features** (e.g., packaging, durability, ergonomics) correlate with positive sentiment, while **upstream sustainability claims** (e.g., supply-chain ethics) receive less engagement.  
-- The integrated **ABSA + Topic-Modeling + LLM** pipeline effectively automates the extraction of design-relevant sustainability signals from unstructured user data.  
-- Results demonstrate a scalable, repeatable framework to inform **eco-conscious product redesign**, **certification alignment**, and **consumer communication strategies**.
+- Start with `Summer 2024 (Engineering Design Scholar Program)/` for the original research pipeline and poster.
+- Use `Fall 2024/Programs/` for the expanded scraping, filtering, GPT analysis, ABSA, product-description analysis, and topic-modeling scripts.
+- Use `Fall 2024/Databases/` for intermediate and final structured datasets from the Fall 2024 phase.
+- Use `Spring 2025/Programs_IDETC/` for the final IDETC-focused scripts and trend analyses.
 
----
+## Reproducibility Notes
 
-## Key Milestones
+This repository preserves the research workflow and intermediate artifacts, but it is not a one-command production package. Many scripts were developed as research notebooks or local pipeline stages and may require path updates before rerunning.
 
-### **Summer 2024**
-1. Developed foundational scraping tools to collect Amazon product and review data tied to sustainability certifications.  
-2. Implemented initial NLP analyses including **ABSA (BERT & VADER)** and **topic modeling (LDA)**.  
-3. Presented preliminary results at the **Berkeley Engineering Design Scholars Final Poster Session**.  
-   [View Poster](https://github.com/NGZheWee/NLP-DrivenSustainableDesign/blob/main/Summer%202024%20(Engineering%20Design%20Scholar%20Program)/NLP%20Driven%20Sustainable%20Design_Derrick.pdf)
+To rerun GPT-assisted steps, create local environment variables instead of placing keys in source files:
 
-### **Fall 2024**
-1. Expanded the dataset to include product categories, features, and affordances for deeper cross-analysis.  
-2. Enhanced **ABSA** with **OpenAI API** integration and introduced **NMF** for complementary topic modeling.  
-3. Conducted correlation analyses linking sentiment, affordances, and certification metadata to uncover perception gaps.
+```powershell
+$env:OPENAI_API_KEY = "your-key"
+$env:OPENAI_ORG_ID = "optional-org-id"
+$env:OPENAI_PROJECT_ID = "optional-project-id"
+```
 
-### **Spring 2025**
-1. Finalized multimodal analysis and validated NLP pipeline outputs against manual coding for reliability.  
-2. Synthesized insights into an interpretable framework for sustainable product redesign.  
-3. Co-authored and published the paper *“Data-Driven Sustainable Design Opportunities from Automated User Insights”* in *ASME IDETC-CIE 2025* (Anaheim, CA).
+Install the approximate Python dependencies with:
 
----
+```powershell
+pip install -r requirements.txt
+```
 
-## Publication
+## Data and Ethics Note
 
-**Goridkov, N., Ng, Z. W., Chen, F., & Goucher-Lambert, K. (2025).**  
-*Data-Driven Sustainable Design Opportunities from Automated User Insights.*  
-*Proceedings of the ASME IDETC-CIE 2025*, Anaheim, CA — Paper IDETC2025-169019.  
-[Read the Paper](https://codesign.berkeley.edu/papers/goridkov-reviews-idetc/)
+The repository contains research artifacts derived from public product and review data. Use the data responsibly, respect source-platform terms, and avoid treating automated sentiment or LLM outputs as ground truth without validation.
 
----
+## Academic Integrity Note
 
-## Acknowledgments
-
-This research was supervised by **Dr. Kosa Goucher-Lambert** and supported by the **Jacobs Institute for Design Innovation** through the **Berkeley Engineering Design Scholars Program** and the **Co-Design Lab**.
+This repository contains my own research code, data-processing artifacts, and publication-related materials, shared for portfolio and research transparency. Do not copy this work for active or future coursework, and follow your institution's academic integrity policies.

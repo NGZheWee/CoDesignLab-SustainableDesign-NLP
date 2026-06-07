@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the associated ASME IDETC-CIE paper."
+title: "NLP-Driven Sustainable Design"
+authors:
+  - family-names: Ng
+    given-names: Zhe Wee
+    orcid: ""
+repository-code: "https://github.com/NGZheWee/NLP-DrivenSustainableDesign"
+preferred-citation:
+  type: conference-paper
+  title: "Data-Driven Sustainable Design Opportunities from Automated User Insights"
+  authors:
+    - family-names: Goridkov
+      given-names: Nicole
+    - family-names: Ng
+      given-names: Zhe Wee
+    - family-names: Goucher-Lambert
+      given-names: Kosa
+  year: 2025
+  conference:
+    name: "ASME 2025 International Design Engineering Technical Conferences and Computers and Information in Engineering Conference"
+  identifiers:
+    - type: url
+      value: "https://codesign.berkeley.edu/papers/goridkov-reviews-idetc/"

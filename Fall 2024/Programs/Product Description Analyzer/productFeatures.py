@@ -6,9 +6,9 @@ import pandas as pd
 
 # OpenAI client initialization
 client = OpenAI(
-    organization='org-P3ku0rZnfoQcLhZDOFipNeoJ',
-    project='proj_NdtqWQ2yFoHGoSMlUyDzHSHJ',
-    api_key='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'
+    organization=os.getenv('OPENAI_ORG_ID'),
+    project=os.getenv('OPENAI_PROJECT_ID'),
+    api_key=os.environ['OPENAI_API_KEY']
 )
 
 # Directories for input and output
