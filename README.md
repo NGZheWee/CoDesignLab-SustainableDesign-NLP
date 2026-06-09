@@ -2,7 +2,7 @@
 
 This repository contains my research artifacts for **NLP-driven sustainable design** work conducted through the **Berkeley Engineering Design Scholars Program** and the **Co-Design Lab** at UC Berkeley. The project studies how customer reviews, product certifications, and natural-language processing can reveal design opportunities for more sustainable consumer products.
 
-The work contributed to the ASME IDETC-CIE 2025 paper **"Data-Driven Sustainable Design Opportunities from Automated User Insights"**. Official project context is available through my [Co-Design Lab profile](https://codesign.berkeley.edu/team/derrick-ng/) and the [Co-Design Lab paper page](https://codesign.berkeley.edu/papers/goridkov-reviews-idetc/).
+The work contributed to the ASME IDETC-CIE 2025 paper **"Data-Driven Sustainable Design Opportunities from Automated User Insights"**. Official project context is available through my [Design Scholars cohort profile](https://jacobsinstitute.berkeley.edu/news/meet-the-2024-berkeley-engineering-design-scholars/), my [Co-Design Lab profile](https://codesign.berkeley.edu/team/derrick-ng/), and the [Co-Design Lab paper page](https://codesign.berkeley.edu/papers/goridkov-reviews-idetc/).
 
 ## Contents
 
